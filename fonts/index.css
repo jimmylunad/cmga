@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Spartan-Light";
+  src: url("./Spartan-Light.ttf");
+  src: url("./Spartan-Light.ttf?#iefix") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("./Roboto-Regular.ttf");
+  src: url("./Roboto-Regular.ttf?#iefix") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Spartan-Regular";
+  src: url("./Spartan-Regular.ttf");
+  src: url("./Spartan-Regular.ttf?#iefix") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Spartan-Medium";
+  src: url("./Spartan-Medium.ttf");
+  src: url("./Spartan-Medium.ttf?#iefix") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Spartan-Bold";
+  src: url("./Spartan-Bold.ttf");
+  src: url("./Spartan-Bold.ttf?#iefix") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Spartan-ExtraBold";
+  src: url("./Spartan-ExtraBold.ttf");
+  src: url("./Spartan-ExtraBold.ttf?#iefix") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Spartan-Black";
+  src: url("./Spartan-Black.ttf");
+  src: url("./Spartan-Black.ttf?#iefix") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
