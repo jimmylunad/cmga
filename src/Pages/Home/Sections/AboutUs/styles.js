@@ -86,6 +86,7 @@ export const BannerStadium = styled(Grid)`
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
     backgroundImage: "url('/images/stadium.png')",
     paddingTop: ['165px', '195px', '195px', '13.45vw'],
     paddingBottom: ['165px', '195px', '195px', '13.45vw'],

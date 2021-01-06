@@ -9,16 +9,33 @@ import {
 } from './styles';
 
 const Transparencia = () => {
+  // https://m2bob-forum.net/wcf/images/avatars/3e/2720-3e546be0b0701e0cb670fa2f4fcb053d4f7e1ba5.jpg
   const [patnerts, setPatnerts] = useState({});
 
   const handleData = async () => {
     let array;
+    const windowWidth = window.innerWidth;
+    const imgWidth = windowWidth < 1155 ? (80/3) : (windowWidth * 0.0552/3);
     await fetch(`${process.env.PUBLIC_URL}/fake/patnertsImages.json`)
       .then((r) => r.json())
       .then((data) => {
         array = data;
       });
+
+    while (array.length % 3 !== 0) {
+      array.push(array[Math.floor(Math.random() * array.length)]);
+    }
     
+    while (array.length * imgWidth <= windowWidth) {
+      array.push({
+        img: '',
+      });
+    }
+
+    /**
+     * Desde aca se ordenan las imagenes para 
+     * renderizar por columnas.
+     */
     let col = 0;
     const objectDataImages = {};
     const imagesDividen = array.map((e, i) => {
@@ -83,6 +100,13 @@ const Transparencia = () => {
       </TransferenceContainer>
       <ContainerPartners>
         <Wrapper>
+          {Object.keys(patnerts).map((col) => (
+            <Column>
+              {patnerts[col].map((row, idx) => (
+                <Partner key={idx} img={row} />
+              ))}
+            </Column>
+          ))}
           {Object.keys(patnerts).map((col) => (
             <Column>
               {patnerts[col].map((row, idx) => (

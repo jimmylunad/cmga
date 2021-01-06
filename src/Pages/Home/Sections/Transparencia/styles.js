@@ -98,11 +98,15 @@ export const Wrapper = styled.div`
   height: 100%;
   transform: translate3d(0, 0, 0);
 
-  animation: moveSlideshow 12s linear infinite;
+  animation: moveSlideshow 35s linear infinite; 
+  
+  &:hover {
+    animation-play-state: paused;
+  }
 
   @keyframes moveSlideshow {
   100% { 
-    transform: translateX(-100%);  
+    transform: translateX(-50%);  
   }
 }
 `;

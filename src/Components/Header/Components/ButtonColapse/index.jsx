@@ -6,6 +6,7 @@ const ButtonCollapse = (props) => {
   const {
     sections,
     handleActivate,
+    sectionsPosition
   } = props;
   const [open, setOpen] = useState(false);
 
@@ -23,10 +24,16 @@ const ButtonCollapse = (props) => {
       <NavRight open={open}>
         <NavElements>
           {sections.map((e, i) => (
-            <Option key={i} active={handleActivate(e.link.substring(1))} open={open}>
-              <a href={e.link} onClick={handleButtonClick}>
-                {e.label}
-              </a>
+            <Option 
+              key={i}
+              open={open}
+              onClick={() => {
+                window.scrollTo( 0, sectionsPosition[e.id.substring(1)].distanceToTop )
+                handleButtonClick()
+              }}
+              active={handleActivate(e.id.substring(1))}
+            >
+              {e.label}
             </Option>
           ))}
         </NavElements>

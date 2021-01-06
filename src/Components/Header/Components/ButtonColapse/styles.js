@@ -69,15 +69,13 @@ export const Option = styled.li`
     height: ['64px'],
     display: 'flex',
     alignItems: 'center',
-    a: {
-      fontWeight: '800',
-      whiteSpace: 'nowrap',
-      visibility: props.open ? 'visible' : 'hidden',
-      color: props.active ? props.theme.colors.gold : 'black',
-      fontSize: props.active ? ['15px'] : ['14px'],
-      paddingLeft: ['20px'],
-      fontFamily: props.theme.fonts.robotoRegular,
-      transition: 'font-size .1s',
-    },
+    fontWeight: '800',
+    whiteSpace: 'nowrap',
+    visibility: props.open ? 'visible' : 'hidden',
+    color: props.active ? props.theme.colors.gold : 'black',
+    fontSize: props.active ? ['15px'] : ['14px'],
+    paddingLeft: ['20px'],
+    fontFamily: props.theme.fonts.robotoRegular,
+    transition: 'font-size .1s',
   })}
 `;
